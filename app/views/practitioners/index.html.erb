@@ -6,9 +6,9 @@
   <% @practitioners.each do |practitioner| %>
     <%= render practitioner %>
     <p>
-      <%= link_to "Show this practitioner", practitioner %>
+      <%= link_to "Show this practitioner", practitioner, class:'btn btn-primary' %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New practitioner", new_practitioner_path %>
+<%= link_to "New practitioner", new_practitioner_path, class:'btn btn-primary' %>
