@@ -1,0 +1,47 @@
+<%= form_with(model: practitioner) do |form| %>
+  <% if practitioner.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(practitioner.errors.count, "error") %> prohibited this practitioner from being saved:</h2>
+
+      <ul>
+        <% practitioner.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :surname, style: "display: block" %>
+    <%= form.text_field :surname %>
+  </div>
+
+  <div>
+    <%= form.label :job, style: "display: block" %>
+    <%= form.text_field :job %>
+  </div>
+
+  <div>
+    <%= form.label :phone, style: "display: block" %>
+    <%= form.number_field :phone %>
+  </div>
+
+  <div>
+    <%= form.label :address, style: "display: block" %>
+    <%= form.text_area :address %>
+  </div>
+
+  <div>
+    <%= form.label :city, style: "display: block" %>
+    <%= form.text_field :city %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
