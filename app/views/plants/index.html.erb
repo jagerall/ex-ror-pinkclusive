@@ -2,14 +2,14 @@
 
 <h1>Plants</h1>
 
-<div id="plants">
+<div id="plants" class="container d-flex flex-wrap">
     <% @plants.each do |plant| %>
 
-    <div class="card rounded-4" style="width: 18rem;">
-  <img src="<%= plant.image %>" class="img-fluid ratio ratio-1x1 rounded-circle object-fit-cover" alt="...">
+    <div class="card rounded-4 m-2 border-0 shadow-sm p-3 mb-5 bg-body rounded" style="width: 18rem; min-width:300px">
+  <img src="<%= plant.image %>" class="w-50 p-3 rounded-circle -object-fit-cover mx-auto img-fluid">
   <div class="card-body">
-    <h5 class="card-title"><%= plant.name %></h5>
-    <p class="card-text">
+    <h5 class="card-title text-center"><%= plant.name %></h5>
+    <p class="card-text text-center">
         <strong>Pv:</strong>
     <%= plant.pv %>
         <strong>Atk:</strong>
@@ -17,7 +17,11 @@
         <strong>Def:</strong>
     <%= plant.def %>
     </p>
-<%= link_to "Show this plant", plant, class:'btn btn-primary' %>  </div>
+
+    <div class="text-center"><%= link_to "Show this plant", plant, class:'btn btn-primary' %> </div>
+  
+  </div>
+
 </div>
     
   <% end %>
