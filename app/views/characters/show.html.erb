@@ -1,68 +1,6 @@
 <p style="color: green"><%= notice %></p>
 
-<div id="<%= dom_id @character %>">
-  <p>
-    <strong>Name:</strong>
-    <%= @character.name %>
-  </p>
-
-  <p>
-    <strong>Surname:</strong>
-    <%= @character.surname %>
-  </p>
-
-  <p>
-    <strong>Pseudonym:</strong>
-    <%= @character.pseudonym %>
-  </p>
-
-  <p>
-    <strong>Age:</strong>
-    <%= @character.age %>
-  </p>
-
-  <p>
-    <strong>Pronoun:</strong>
-    <%= @character.pronoun %>
-  </p>
-
-  <p>
-    <strong>Nationality:</strong>
-    <%= @character.nationality %>
-  </p>
-
-  <p>
-    <strong>Job:</strong>
-    <%= @character.job %>
-  </p>
-
-  <p>
-    <strong>Capacity:</strong>
-    <%= @character.capacity %>
-  </p>
-
-  <p>
-    <strong>Fact:</strong>
-    <%= @character.fact %>
-  </p>
-
-  <p>
-    <strong>Personality:</strong>
-    <%= @character.personality %>
-  </p>
-
-  <p>
-    <strong>Story:</strong>
-    <%= @character.story %>
-  </p>
-
-  <p>
-    <strong>Image:</strong>
-    <%= @character.image %>
-  </p>
-
-</div>
-
+<%= render @character %>
 
 <div>
   <%= link_to "Edit this character", edit_character_path(@character) %> |
