@@ -1,3 +1,31 @@
+body{
+background-color: #D9E0F1;
+
+#plants, #parasites{
+    display:flex;
+    flex-wrap:wrap;
+
+    .card{
+        background:#F5F5F5;
+        min-width:300px;
+        margin:5px;
+        border:none;
+        border-radius:none;
+        justify-content: center;
+        align-items: center;
+
+        .card-img-top{
+            aspect-ratio: 1;
+            object-fit: cover;
+            border-radius:100%;
+            max-width:50%;
+            margin:20px;
+        }
+
+    }
+}
+
 .btn {
     margin:5px;
+}
 }

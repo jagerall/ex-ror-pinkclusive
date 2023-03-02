@@ -3,12 +3,17 @@
 <h1>Plants</h1>
 
 <div id="plants">
-  <% @plants.each do |plant| %>
-    <%= render plant %>
-    <p>
-      <%= link_to "Show this plant", plant %>
-    </p>
+    <% @plants.each do |plant| %>
+
+    <div class="card" style="width: 18rem;">
+  <img src="<%= plant.image %>" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><%= plant.name %></h5>
+    <p class="card-text"><%= plant.description %></p>
+<%= link_to "Show this plant", plant, class:'btn btn-primary' %>  </div>
+</div>
+    
   <% end %>
 </div>
 
-<%= link_to "New plant", new_plant_path %>
+<%= link_to "New plant", new_plant_path, class:'btn btn-primary' %>
