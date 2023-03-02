@@ -2,13 +2,29 @@
 
 <h1>Parasites</h1>
 
-<div id="parasites">
-  <% @parasites.each do |parasite| %>
-    <%= render parasite %>
-    <p>
-      <%= link_to "Show this parasite", parasite %>
+<div id="parasites" class="container d-flex flex-wrap">
+    <% @parasites.each do |parasite| %>
+
+    <div class="card rounded-4 border-0 shadow-sm p-3 mb-5 bg-body rounded" style="width: 18rem; min-width:300px">
+  <img src="<%= parasite.image %>" class="w-50 p-3 rounded-circle -object-fit-cover mx-auto img-fluid">
+  <div class="card-body">
+    <h5 class="card-title text-center"><%= parasite.name %></h5>
+    <p class="card-text text-center">
+        <strong>Pv:</strong>
+    <%= parasite.pv %>
+        <strong>Atk:</strong>
+    <%= parasite.atk %>
+        <strong>Def:</strong>
+    <%= parasite.def %>
     </p>
+
+    <div class="text-center"><%= link_to "Show this parasite", parasite, class:'btn btn-primary' %> </div>
+  
+  </div>
+
+</div>
+    
   <% end %>
 </div>
 
-<%= link_to "New parasite", new_parasite_path %>
+<%= link_to "New parasite", new_parasite_path, class:'btn btn-success' %>

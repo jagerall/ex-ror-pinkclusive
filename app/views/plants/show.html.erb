@@ -1,10 +1,33 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @plant %>
+<div class="card rounded-4 border-0 shadow-sm p-3 mb-5 bg-body rounded" style="max-width: 100%;">
+  <div class="row g-0">
+    <div class="col-md-3">
+      <img src="<%= @plant.image %>" class="img-fluid rounded-start ">
+    </div>
+    <div class="col-md-9">
+      <div class="card-body">
+        <h3 class="card-title"><%= @plant.name %></h5>
+        <p class="card-tex">
+          <strong>Pv:</strong>
+          <%= @plant.pv %>
+          <strong>Atk:</strong>
+          <%= @plant.atk %>
+          <strong>Def:</strong>
+          <%= @plant.def %>
+        </p>
+        <h5 class="card-title">Description</h5>
+        <p class="card-text"><%= @plant.description %></p>
+        <h5 class="card-title">Capacity</h5>
+        <p class="card-text"><%= @plant.capacity %></p>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div>
-  <%= link_to "Edit this plant", edit_plant_path(@plant) %> |
-  <%= link_to "Back to plants", plants_path %>
+  <%= link_to "Edit this plant", edit_plant_path(@plant), class:'btn btn-warning' %> 
+  <%= link_to "Back to plants", plants_path, class:'btn btn-primary' %>
 
-  <%= button_to "Destroy this plant", @plant, method: :delete %>
+  <%= button_to "Destroy this plant", @plant, method: :delete, class:'btn btn-danger mt-2' %>
 </div>

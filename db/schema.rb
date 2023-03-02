@@ -14,29 +14,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_02_162529) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "characters", force: :cascade do |t|
-    t.string "name"
-    t.string "surname"
-    t.string "pseudonym"
-    t.integer "age"
-    t.string "pronoun"
-    t.string "nationality"
-    t.string "job"
-    t.text "capacity"
-    t.text "fact"
-    t.text "personality"
-    t.text "story"
-    t.text "image"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "jobs", force: :cascade do |t|
-    t.string "title"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "lores", force: :cascade do |t|
     t.string "title"
     t.text "content"
@@ -65,17 +42,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_02_162529) do
     t.integer "atk"
     t.integer "def"
     t.text "image"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "practitioners", force: :cascade do |t|
-    t.string "name"
-    t.string "surname"
-    t.string "job"
-    t.integer "phone"
-    t.text "address"
-    t.string "city"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

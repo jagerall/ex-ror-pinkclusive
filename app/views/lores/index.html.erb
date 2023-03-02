@@ -1,14 +1,27 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Lores</h1>
+<h1>Lore</h1>
 
 <div id="lores">
   <% @lores.each do |lore| %>
-    <%= render lore %>
-    <p>
-      <%= link_to "Show this lore", lore %>
-    </p>
+    <div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+      <%= lore.title %>
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+      <p> <%= lore.content %></p>
+      <%= link_to "Show more", lore, class:'btn btn-primary mt-3' %>
+      </div>
+    </div>
+  </div>
+</div>
   <% end %>
 </div>
 
-<%= link_to "New lore", new_lore_path %>
+<%= link_to "New lore", new_lore_path, class:'btn btn-primary mb-5 mt-2' %>
+
+

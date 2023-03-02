@@ -1,10 +1,33 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @parasite %>
+<div class="card rounded-4 border-0 shadow-sm p-3 mb-5 bg-body rounded" style="max-width: 100%;">
+  <div class="row g-0">
+    <div class="col-md-3">
+      <img src="<%= @parasite.image %>" class="img-fluid rounded-start ">
+    </div>
+    <div class="col-md-9">
+      <div class="card-body">
+        <h3 class="card-title"><%= @parasite.name %></h5>
+        <p class="card-tex">
+          <strong>Pv:</strong>
+          <%= @parasite.pv %>
+          <strong>Atk:</strong>
+          <%= @parasite.atk %>
+          <strong>Def:</strong>
+          <%= @parasite.def %>
+        </p>
+        <h5 class="card-title">Description</h5>
+        <p class="card-text"><%= @parasite.description %></p>
+        <h5 class="card-title">Capacity</h5>
+        <p class="card-text"><%= @parasite.capacity %></p>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div>
-  <%= link_to "Edit this parasite", edit_parasite_path(@parasite) %> |
-  <%= link_to "Back to parasites", parasites_path %>
+  <%= link_to "Edit this parasite", edit_parasite_path(@parasite), class:'btn btn-warning' %> 
+  <%= link_to "Back to parasites", parasites_path, class:'btn btn-primary' %>
 
-  <%= button_to "Destroy this parasite", @parasite, method: :delete %>
+  <%= button_to "Destroy this parasite", @parasite, method: :delete, class:'btn btn-danger mt-2' %>
 </div>
