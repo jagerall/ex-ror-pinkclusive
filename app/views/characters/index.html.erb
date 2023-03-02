@@ -4,11 +4,15 @@
 
 <div id="characters">
   <% @characters.each do |character| %>
-    <%= render character %>
-    <p>
-      <%= link_to "Show this character", character %>
-    </p>
+    <div class="card" style="width: 18rem;">
+  <img src="<%= character.image %>" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><%= character.name %> <%= character.surname %></h5>
+    <p class="card-text"><%= character.story %></p>
+      <%= link_to "Show this character", character, class:'btn btn-primary' %>
+  </div>
+</div>
   <% end %>
 </div>
 
-<%= link_to "New character", new_character_path %>
+<%= link_to "New character", new_character_path, class:'btn btn-dark btn-new-chara' %>
