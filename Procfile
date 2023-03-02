@@ -1,3 +1,2 @@
 postdeploy: rails db:migrate
-web: bin/rails server -p 3000
-css: bin/rails tailwindcss:watch
+web: bundle exec rails server -b 0.0.0.0 -p $PORT -e $RAILS_ENV
