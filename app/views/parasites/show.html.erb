@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @parasite %>
+
+<div>
+  <%= link_to "Edit this parasite", edit_parasite_path(@parasite) %> |
+  <%= link_to "Back to parasites", parasites_path %>
+
+  <%= button_to "Destroy this parasite", @parasite, method: :delete %>
+</div>
