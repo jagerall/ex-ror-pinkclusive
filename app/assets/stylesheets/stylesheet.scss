@@ -1,3 +1,5 @@
+/*
+
 body{
 background-color: #D9E0F1;
 
@@ -10,16 +12,17 @@ background-color: #D9E0F1;
         min-width:300px;
         margin:5px;
         border:none;
-        border-radius:none;
+        border-radius:30px;
         justify-content: center;
         align-items: center;
+        text-align: center;
 
         .card-img-top{
             aspect-ratio: 1;
             object-fit: cover;
             border-radius:100%;
             max-width:50%;
-            margin:20px;
+            margin-top:30px;
         }
 
     }
@@ -29,3 +32,5 @@ background-color: #D9E0F1;
     margin:5px;
 }
 }
+
+*/
