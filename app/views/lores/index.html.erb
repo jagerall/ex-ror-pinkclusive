@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Lores</h1>
+
+<div id="lores">
+  <% @lores.each do |lore| %>
+    <%= render lore %>
+    <p>
+      <%= link_to "Show this lore", lore %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New lore", new_lore_path %>

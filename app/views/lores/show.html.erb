@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @lore %>
+
+<div>
+  <%= link_to "Edit this lore", edit_lore_path(@lore) %> |
+  <%= link_to "Back to lores", lores_path %>
+
+  <%= button_to "Destroy this lore", @lore, method: :delete %>
+</div>
