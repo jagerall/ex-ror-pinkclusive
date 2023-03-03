@@ -1,10 +1,25 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @lore %>
+<div class="card rounded-4 border-0 shadow-sm p-3 mb-5 bg-body rounded" style="max-width: 100%;">
+  <div class="row g-0">
+    <div class="col-md-3">
+      <img src="<%= @lore.image %>" class="img-fluid rounded-start ">
+    </div>
+    <div class="col-md-9">
+      <div class="card-body">
+        <h2 class="card-title"><%= @lore.title %></h2>
+        <p class="card-tex">
+          <%= @lore.content %>
+        </p>
+ 
+      </div>
+    </div>
+  </div>
+</div>
 
 <div>
-  <%= link_to "Edit this lore", edit_lore_path(@lore) %> |
-  <%= link_to "Back to lores", lores_path %>
+  <%= link_to "Edit this lore", edit_lore_path(@lore), class:'btn btn-warning' %> 
+  <%= link_to "Back to lores", lore_path, class:'btn btn-primary' %>
 
-  <%= button_to "Destroy this lore", @lore, method: :delete %>
+  <%= button_to "Destroy this lore", @lore, method: :delete, class:'btn btn-danger mt-2' %>
 </div>
