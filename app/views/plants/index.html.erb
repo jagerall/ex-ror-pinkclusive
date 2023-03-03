@@ -5,27 +5,27 @@
 <div id="plants" class="container d-flex flex-wrap p-0">
     <% @plants.each do |plant| %>
 
-    <div class="card shadow-sm p-3 mb-5 bg-body rounded-2 me-2 border border-success" style="width:300px">
-  <img src="<%= plant.image %>" class="w-50 p-3 rounded-circle -object-fit-cover mx-auto img-fluid">
-  <div class="card-body">
-    <h5 class="card-title text-center"><%= plant.name %></h5>
-    <div class="h-2 w-100 p-1 bg-success rounded"></div>
-    <p class="card-text text-center text-muted">
-        HP:
-    <%= plant.pv %>
-    </p>
-    <p class="card-text text-center">
-        <strong>Atk:</strong>
-    <%= plant.atk %>
-        <strong>Def:</strong>
-    <%= plant.def %>
-    </p>
-
-    <div class="text-center"><%= link_to "Show this plant", plant, class:'btn btn-primary rounded-2' %> </div>
-  
-  </div>
-
-</div>
+    <%= link_to(plant, class:'link-dark text-decoration-none') do %>
+        <div class="card shadow-sm mb-5 bg-body rounded-3 me-2 border border-success p-0" style="width:300px">
+      <img src="<%= plant.image %>" class="w-100 p-0 -object-fit-cover mx-auto img-fluid">
+      <div class="card-body">
+        <h5 class="card-title text-center"><%= plant.name %></h5>
+        <div class="h-2 w-50 p-1 bg-success rounded mt-4 mx-auto"></div>
+        <div class="card-text mt-4 justify-content-around d-flex flex-row">
+          <p>
+            <strong>HP:</strong>
+            <%= plant.pv %>
+          </p>
+          <p>
+            <strong>Atk:</strong>
+            <%= plant.atk %>
+            <strong>Def:</strong>
+            <%= plant.def %>
+          </p>
+        </div>
+      </div>
+    </div>
+<% end %>
     
   <% end %>
 </div>
