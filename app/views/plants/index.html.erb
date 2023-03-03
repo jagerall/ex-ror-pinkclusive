@@ -9,9 +9,12 @@
   <img src="<%= plant.image %>" class="w-50 p-3 rounded-circle -object-fit-cover mx-auto img-fluid">
   <div class="card-body">
     <h5 class="card-title text-center"><%= plant.name %></h5>
-    <p class="card-text text-center">
-        <strong>Pv:</strong>
+    <div class="h-2 w-100 p-1 bg-success rounded"></div>
+    <p class="card-text text-center text-muted">
+        HP:
     <%= plant.pv %>
+    </p>
+    <p class="card-text text-center">
         <strong>Atk:</strong>
     <%= plant.atk %>
         <strong>Def:</strong>
