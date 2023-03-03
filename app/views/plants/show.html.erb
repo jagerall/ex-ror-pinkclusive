@@ -7,8 +7,8 @@
     </div>
     <div class="col-md-5">
       <div class="card-body">
-        <h3 class="title"><strong><%= @plant.name %></strong></h3>
-        <p class="text">
+        <h3 class="card-title"><strong><%= @plant.name %></strong></h3>
+        <p class="card-text">
           <strong>HP:</strong>
           <%= @plant.pv %>
           <strong>Atk:</strong>
@@ -16,10 +16,10 @@
           <strong>Def:</strong>
           <%= @plant.def %>
         </p>
-        <h4 class="title">Description :</h4>
-        <p class="text"><%= @plant.description %></p>
-        <h4 class="title">Capacity :</h4>
-        <p class="text"><%= @plant.capacity %></p>
+        <h4 class="card-title">Description :</h4>
+        <p class="card-text"><%= @plant.description %></p>
+        <h4 class="card-title">Capacity :</h4>
+        <p class="card-text"><%= @plant.capacity %></p>
       </div>
     </div>
   </div>
