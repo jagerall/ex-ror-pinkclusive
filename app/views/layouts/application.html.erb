@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Pinklusive</title>
+    <title>Terrarium</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,7 +10,7 @@
   </head>
 
   <body class="bg-light">
-    <nav class="navbar navbar-expand-lg ml-5 border-0 shadow-sm p-4 mb-5 rounded">
+    <nav class="navbar navbar-expand-lg ml-5 border-0 p-4 mb-5">
         <div class="container-fluid container">
           <a class="navbar-brand" href="#">
             <%= image_tag 'logo.svg', class:"mx-auto img-fluid me-5" %>
@@ -20,9 +20,9 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <%= link_to "See all plants", plants_path, class:'btn btn-primary me-3 mb-2 rounded-2' %>
-              <%= link_to "See all parasites", parasites_path, class:'btn btn-primary me-3 mb-2 rounded-2' %>
-              <%= link_to "Learn more about this universe", lores_path, class:'btn btn-primary me-3 mb-2 rounded-2' %>
+              <%= link_to "See all plants", plants_path, class:'me-3 mb-2' %>
+              <%= link_to "See all parasites", parasites_path, class:'me-3 mb-2' %>
+              <%= link_to "Learn more about this universe", lores_path, class:'me-3 mb-2' %>
             </div>
           </div>
         </div>
