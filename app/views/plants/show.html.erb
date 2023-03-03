@@ -1,14 +1,14 @@
 <p style="color: green"><%= notice %></p>
 
-<div class="card rounded-4 border-0 shadow-sm p-3 mb-5 bg-body rounded" style="max-width: 100%;">
-  <div class="row g-0">
-    <div class="col-md-3">
+<div class="card bg-light border border-0 rounded-0 mb-5" style="max-width: 100%;">
+  <div class="row g-0 d-flex justify-content-between">
+<div class="col-md-5">
       <img src="<%= @plant.image %>" class="img-fluid rounded ">
     </div>
-    <div class="col-md-9">
+    <div class="col-md-5">
       <div class="card-body">
-        <h3 class="card-title"><%= @plant.name %></h5>
-        <p class="card-tex">
+        <h3 class="title"><strong><%= @plant.name %></strong></h3>
+        <p class="text">
           <strong>HP:</strong>
           <%= @plant.pv %>
           <strong>Atk:</strong>
@@ -16,10 +16,10 @@
           <strong>Def:</strong>
           <%= @plant.def %>
         </p>
-        <h5 class="card-title">Description</h5>
-        <p class="card-text"><%= @plant.description %></p>
-        <h5 class="card-title">Capacity</h5>
-        <p class="card-text"><%= @plant.capacity %></p>
+        <h4 class="title">Description :</h4>
+        <p class="text"><%= @plant.description %></p>
+        <h4 class="title">Capacity :</h4>
+        <p class="text"><%= @plant.capacity %></p>
       </div>
     </div>
   </div>
