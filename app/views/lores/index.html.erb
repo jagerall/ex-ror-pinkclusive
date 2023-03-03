@@ -3,22 +3,22 @@
 <h1>Lore</h1>
 
 <div id="lores">
-  <% @lores.each do |lore| %>
+    <% @lores.each do |lore| %>
     <div class="accordion" id="accordionExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-      <%= lore.title %>
-      </button>
-    </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-      <p> <%= lore.content %></p>
-      <%= link_to "Show more", lore, class:'btn btn-primary mt-3' %>
+      <div class="accordion-item border border-0">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button bg-light text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <%= lore.title %>
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show bg-light" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+          <p> <%= lore.content %></p>
+          <%= link_to "Show more", lore, class:'btn btn-primary mt-3' %>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
   <% end %>
 </div>
 
