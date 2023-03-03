@@ -74,4 +74,4 @@ end
 
 gem 'simple_form'
 
-gem "jsbundling-rails", "~> 1.1"
+# gem "jsbundling-rails", "~> 1.1"
