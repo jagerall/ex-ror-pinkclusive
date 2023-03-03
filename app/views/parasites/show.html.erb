@@ -1,14 +1,14 @@
 <p style="color: green"><%= notice %></p>
 
-<div class="card rounded-4 border-0 shadow-sm p-3 mb-5 bg-body rounded" style="max-width: 100%;">
-  <div class="row g-0">
-    <div class="col-md-3">
+<div class="card bg-light border border-0 rounded-0 mb-5" style="max-width: 100%;">
+  <div class="row g-0 d-flex justify-content-between">
+<div class="col-md-5">
       <img src="<%= @parasite.image %>" class="img-fluid rounded ">
     </div>
-    <div class="col-md-9">
+    <div class="col-md-5">
       <div class="card-body">
         <h3 class="card-title"><%= @parasite.name %></h5>
-        <p class="card-tex">
+        <p class="card-text">
           <strong>Pv:</strong>
           <%= @parasite.pv %>
           <strong>Atk:</strong>
