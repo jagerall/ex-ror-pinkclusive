@@ -1,24 +1,12 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Lore</h1>
+<h1 class="mb-5">Lore</h1>
 
-<div id="lores">
+<div id="lores" class="d-flex flex-column">
     <% @lores.each do |lore| %>
-    <div class="accordion" id="accordionExample">
-      <div class="accordion-item border border-0">
-        <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button bg-light text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          <%= lore.title %>
-          </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse show bg-light" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-          <p> <%= lore.content %></p>
-          <%= link_to "Show more", lore, class:'btn btn-primary mt-3' %>
-          </div>
-        </div>
-      </div>
-    </div>
+      <ul>
+     <li><h3 class="mb-4"><%= link_to lore.title, lore, class:'text-decoration-none text-black' %></h3></li>
+     </ul>
   <% end %>
 </div>
 
